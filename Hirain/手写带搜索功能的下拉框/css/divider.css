@@ -1,9 +1,0 @@
-.container .middle .divider{
-    /* 大小 */
-    height: 1px;
-    box-sizing: border-box;
-    /* 样式 */
-    background: var(--grey);
-    /* 间距 */
-    margin: 10px 90px;
-}
