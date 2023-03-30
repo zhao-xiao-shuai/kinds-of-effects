@@ -1,0 +1,124 @@
+
+/**
+ * 与位置计算相关的参数
+ */
+//toggle的大小
+@toggle-size:100px;
+//toggle放大的比例
+@toggle-scale:3;
+//轮盘图标背景的大小
+@icon-hover-size:25px;
+
+//toggle的背景颜色
+@toggle-background-color:#ffa39e;
+
+//轮盘图标大小
+@icon-size:15px;
+
+//轮盘图标背景的颜色
+@icon-hover-background:#dcdcdc;
+
+//中间图标大小
+@middle-icon-size:60px;
+
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.icon(){
+    //大小
+    width: @icon-size;
+    height: @icon-size;
+    box-sizing: border-box;
+}
+
+#app{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    //大小
+    height: 100vh;
+    //布局
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .corona{
+        //定位
+        position: relative;
+        //布局
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .toggle{
+            //样式
+            background: @toggle-background-color;
+            text-align: center;
+            cursor: pointer;
+            //大小
+            height: @toggle-size;
+            width: @toggle-size;
+            box-sizing: border-box;
+            border-radius: 50%;
+            //显示
+            z-index: 2;
+            //布局
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //过渡
+            transition: transform 0.7s ease;
+            .icon{
+                .icon();
+                width: @middle-icon-size;
+                height: @middle-icon-size;
+                box-sizing: border-box;
+            }
+        }
+        .toggle.active{
+            transform: rotate(360deg);
+        }
+        .menu{
+            //样式
+            background: #fff;
+            box-shadow: 4px 4px 20px inset rgba(210, 210, 210, 0.5);
+            //大小
+            width: @toggle-size;
+            height:@toggle-size;
+            border-radius: 50%;
+            box-sizing: border-box;
+            //过渡
+            transition: transform ease 0.7s;
+            //定位
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            .menu-item{
+                //定位
+                position: absolute;
+                //大小
+                width: @icon-hover-size;
+                height: @icon-hover-size;
+                border-radius: 50%;
+                //样式
+                cursor: pointer;
+                //布局
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover{
+                    background: @icon-hover-background;
+                }
+                .icon{
+                    .icon();
+                }
+            }
+        }
+        .menu.active{
+            transform: scale(3);
+        }
+    }
+}

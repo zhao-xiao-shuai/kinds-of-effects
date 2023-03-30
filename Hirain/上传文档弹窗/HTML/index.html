@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建文档弹窗</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="left.css">
+    <link rel="stylesheet" href="right.css">
+    <!-- <link rel="stylesheet" href="input.css"> -->
+    <!-- <link rel="stylesheet" href="select.css"> -->
+    <!-- <link rel="stylesheet" href="reuse_ERP.css"> -->
+</head>
+<body>
+
+    <div class="container-UploadDocument">
+
+        <input type="radio" name="tab" id="tab1" class="radio1" checked>
+        <input type="radio" name="tab" id="tab2" class="radio2">
+
+        <label for="tab1">多个文件创建一个文档</label>
+        <label for="tab2">每个文件创建一个文档</label>
+
+        <div class="animation"></div>
+
+        <div class="content">
+
+            <!-- tab1的显示内容 -->
+            <div class="tab">
+
+                <!-- 左侧 -->
+                <div class="left">
+
+                    <!-- 公共账号 -->
+                    <div class="line">
+                        <span>当前公共账号</span>
+                    </div>
+                    <div class="public-account">
+                        <span></span>
+                    </div>
+
+                    <!-- 已点选文件名 -->
+                    <div class="line">
+                        <span>点选文件展示</span>
+                    </div>
+                    <section class="selected-file">
+                        <!-- <li class="row">
+                            <img src="Pictures/document.png" alt="">
+                            <div class="details">
+                                <span class="name">这是文件名称.png</span>
+                                <span class="size">8kB</span>
+                            </div>
+                        </li>
+                        <li class="row">
+                            <img src="Pictures/document.png" alt="">
+                            <div class="details">
+                                <span class="name">这是文件名称.png</span>
+                                <span class="size">8kB</span>
+                            </div>
+                        </li> -->
+                    </section>
+
+                </div>
+
+                <!-- 右侧 -->
+                <div class="right">
+
+                    <div class="line">
+                        <span>文档名称</span>
+                    </div>
+                    <div class="input DocumentName">
+                        <input type="text" spellcheck="false" 
+                        autocomplete="off" placeholder="请输入文档名称">
+                        <div class="cha"></div>
+                    </div>
+
+                    <div class="line">
+                        <span>文档实际所有者</span>
+                    </div>
+                    <div class="input ActualOwner">
+                        <input type="text" spellcheck="false" 
+                        autocomplete="off" placeholder="请输入文档实际所有者">
+                        <div class="triangle"></div>
+                    </div>
+
+                    <div class="line">
+                        <span>文档版本</span>
+                    </div>
+                    <div class="input DocumentVersion">
+                        <input type="text" spellcheck="false" 
+                        autocomplete="off" placeholder="请输入文档版本">
+                        <div class="cha"></div>
+                    </div>
+
+                    <div class="line">
+                        <span>复用ERP号</span>
+                    </div>
+                    <div class="input ERP">
+                        <input type="text" spellcheck="false" 
+                        autocomplete="off" placeholder="请输入复用ERP号">
+                        <div class="cha"></div>
+                        <button>添加</button>
+                    </div>
+                    
+                    <!-- 已添加复用ERP号的展示部分 -->
+                    <div class="addERPs">
+                        <div class="ERP-content">
+                        </div>
+                        <div class="ERP-details">
+                            <p>已添加 <span>0</span> 个复用ERP号</p>
+                            <button>移除所有</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- tab2的显示内容 -->
+            <div class="tab">
+
+                <!-- 左侧 -->
+                <div class="left">
+
+                    <!-- 公共账号 -->
+                    <div class="line">
+                        <span>当前公共账号</span>
+                    </div>
+                    <div class="public-account">
+                        <span>BJ-CAE(北京机械结构部)</span>
+                    </div>
+
+                    <!-- 已点选文件名 -->
+                    <div class="line">
+                        <span>点选文件展示</span>
+                    </div>
+                    <section class="selected-file">
+                    </section>
+
+                </div>
+
+                <!-- 右侧 -->
+                <div class="right">
+
+                    <div class="line">
+                        <span>文档实际所有者</span>
+                    </div>
+                    <div class="input ActualOwner">
+                        <input type="text" spellcheck="false" 
+                        autocomplete="off" placeholder="请输入文档实际所有者">
+                        <div class="triangle"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- 底部按钮 -->
+        <div class="footer">
+            <input type="button" value="确认">
+            <input type="button" value="取消">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

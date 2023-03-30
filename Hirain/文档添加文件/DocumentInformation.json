@@ -1,0 +1,19 @@
+{
+    "DocumentId":"xxxxxxxxxxxxx",
+    "DocumentName":"这是文档的名称xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "DocumentFiles":[
+        {
+            "FileName":"文件1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.txt",
+            "FileSize":12569
+        },
+        {
+            "FileName":"文件2.png",
+            "FileSize":124
+        },
+        {
+            "FileName":"文件3.txt",
+            "FileSize":9999999
+        }
+    ],
+    "description":"文档信息"
+}

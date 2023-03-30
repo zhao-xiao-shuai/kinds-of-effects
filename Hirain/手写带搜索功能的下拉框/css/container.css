@@ -1,0 +1,32 @@
+:root{
+    /* 颜色相关 */
+    --button-color:#91d5ff;
+    --grey:#d9d9d9;
+
+    /* 大小相关 */
+    --container-width:600px;
+    --input-width:250px;
+}
+.background{
+    /* 布局 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 样式 */
+    background: #fff;
+    /* 间距 */
+    padding: 20px;
+}
+.container{
+    /* 大小 */
+    width: var(--container-width);
+    /* 布局 */
+    display: flex;
+    flex-direction: column;
+    /* 样式 */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    /* 间距 */
+    /* padding: 0 15px; */
+}

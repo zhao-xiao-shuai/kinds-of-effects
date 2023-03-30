@@ -1,0 +1,81 @@
+/**
+ * 与位置计算相关的参数
+ */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+#app {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .corona {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .corona .toggle {
+  background: #ffa39e;
+  text-align: center;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.7s ease;
+}
+#app .corona .toggle .icon {
+  width: 15px;
+  height: 15px;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+}
+#app .corona .toggle.active {
+  transform: rotate(360deg);
+}
+#app .corona .menu {
+  background: #fff;
+  box-shadow: 4px 4px 20px inset rgba(210, 210, 210, 0.5);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: transform ease 0.7s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#app .corona .menu .menu-item {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#app .corona .menu .menu-item:hover {
+  background: #dcdcdc;
+}
+#app .corona .menu .menu-item .icon {
+  width: 15px;
+  height: 15px;
+  box-sizing: border-box;
+}
+#app .corona .menu.active {
+  transform: scale(3);
+}

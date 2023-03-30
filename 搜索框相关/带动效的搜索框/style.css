@@ -1,0 +1,99 @@
+.container {
+  height: 300px;
+  width: 240px;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+.container .cusSelBlock {
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+.container .cusSelBlock #cusSelectbox {
+  height: 100%;
+  width: 100%;
+}
+.container .cusSelBlock #cusSelectbox .option {
+  height: 50px;
+  width: 100%;
+  display: inline-block;
+  position: relative;
+}
+.container .cusSelBlock .s-hidden {
+  visibility: hidden;
+}
+.container .cusSelBlock .select-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background: #fff;
+  border: 1px solid #333;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  color: #333;
+  cursor: pointer;
+  letter-spacing: 2px;
+  display: block;
+  line-height: 50px;
+  text-align: left;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  padding: 0 50px 0 20px;
+}
+.container .cusSelBlock .select-label .select-label-box {
+  width: 50px;
+  height: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  line-height: 50px;
+  border-left: 1px solid #333;
+}
+.container .cusSelBlock .select-label .select-label-box i {
+  font-size: 22px;
+}
+.container .cusSelBlock .options {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50px;
+  height: 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.container .cusSelBlock .options li {
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  border-left: 1px solid #333;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  list-style: none;
+  display: block;
+  line-height: 50px;
+  text-align: left;
+  padding: 0 50px 0 20px;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: 0;
+  height: 50px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.container .cusSelBlock .options li:hover {
+  background-color: #333;
+  color: #fff;
+}
+.container .cusSelBlock .options .active {
+  background-color: #333;
+  color: #fff;
+}

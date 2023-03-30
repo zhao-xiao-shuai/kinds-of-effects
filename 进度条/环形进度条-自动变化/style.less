@@ -1,0 +1,126 @@
+
+//环形的大小
+@circle-size:400px;
+//环形的颜色
+@circle-background:#42c02e;
+
+//文字区域的大小
+@word-size:360px;
+
+.left-right-box(){
+    //大小
+    width: 50%;
+    height: @circle-size;
+    //定位
+    float: left;
+    position: relative;
+    //显示
+    overflow: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    #app{
+        //大小
+        width: 100vw;
+        height: 100vh;
+        //布局
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .circle{
+            //大小
+            width: @circle-size;
+            height: @circle-size;
+            border-radius: 50%;
+            //定位
+            position: relative;
+            //样式
+            background: @circle-background;
+            //布局
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            // margin: 100px auto;
+            .word{
+                //大小
+                width: @word-size;
+                height: @word-size;
+                border-radius: 50%;
+                //布局
+                line-height: @word-size;
+                text-align: center;
+                //样式
+                font-size: 30px;
+                font-weight: bolder;
+                background: #fff;
+                color: @circle-background;
+                //定位
+                position: absolute;
+                top: calc((@circle-size - @word-size) / 2);
+                left: calc((@circle-size - @word-size) / 2);
+                //显示
+                z-index: 999
+            }
+            .left-box{
+                .left-right-box();
+                .left{
+                    //大小
+                    width: calc(@circle-size / 2);
+                    height: @circle-size;
+                    border-radius: calc(@circle-size / 2) 0 0 calc(@circle-size / 2);
+                    //定位
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    //样式
+                    background: #ddd;
+                    transform: rotate(0deg);
+                    transform-origin: right  center;
+                    //动画
+                    animation: rotateL 10s linear infinite;
+                    animation-delay: 5s;
+                }
+            }
+            .right-box{
+                .left-right-box();
+                .right{
+                    //大小
+                    width: calc(@circle-size / 2);
+                    height: @circle-size;
+                    border-radius: 0 calc(@circle-size / 2) calc(@circle-size / 2) 0;
+                    //定位
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    //样式
+                    background: #ddd;
+                    transform: rotate(1deg);
+                    transform-origin: left center;
+                    //动画
+                    animation: rotateR 10s linear infinite;
+                }
+            }
+        }
+
+    }
+}
+
+@keyframes rotateL{
+    0%,51%,100%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotateR{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%,100%{
+        transform: rotate(180deg);
+    }
+}

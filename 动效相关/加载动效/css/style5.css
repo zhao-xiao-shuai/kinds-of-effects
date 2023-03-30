@@ -1,0 +1,67 @@
+.line-container .loading5 .wrapper{
+    /* 大小 */
+    height: 120px;
+    width: 120px;
+    /* 布局 */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* 间距 */
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+}
+.line-container .loading5 .wrapper .item{
+    /* 样式 */
+    background: crimson;
+}
+
+.line-container .loading5 .wrapper .item:nth-child(1){
+    animation: loading5 4s infinite 0s;
+}
+.line-container .loading5 .wrapper .item:nth-child(2){
+    animation: loading5 4s infinite 0.25s;
+}
+.line-container .loading5 .wrapper .item:nth-child(3){
+    animation: loading5 4s infinite 0.5s;
+}
+.line-container .loading5 .wrapper .item:nth-child(4){
+    animation: loading5 4s infinite 0.75s;
+}
+.line-container .loading5 .wrapper .item:nth-child(5){
+    animation: loading5 4s infinite 1s;
+}
+.line-container .loading5 .wrapper .item:nth-child(6){
+    animation: loading5 4s infinite 1.25s;
+}
+.line-container .loading5 .wrapper .item:nth-child(7){
+    animation: loading5 4s infinite 1.5s;
+}
+.line-container .loading5 .wrapper .item:nth-child(8){
+    animation: loading5 4s infinite 1.75s;
+}
+.line-container .loading5 .wrapper .item:nth-child(9){
+    animation: loading5 4s infinite 2s;
+}
+
+@keyframes loading5{
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    5% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    45% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    55% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

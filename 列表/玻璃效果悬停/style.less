@@ -1,0 +1,188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+//背景颜色
+@background-color:#161223;
+
+//红日的背景颜色
+@red-sun-big-background-color:linear-gradient(#ffc107,#e91e63);
+@red-sun-small-background-color:linear-gradient(#2196f3,#31ff38);
+//红日的大小
+@red-sun-size-big:400px;
+@red-sun-size-small:350px;
+
+//盒子大小
+@box-height:400px;
+@box-width:350px;
+//盒子背景颜色
+@box-background-color:rgba(255,255,255,0.1);
+//盒子边框颜色
+@box-border-color:rgba(255,255,255,0.5);
+@box-border-right-color:rgba(255,255,255,0.2);
+@box-border-bottom-color:rgba(255,255,255,0.2);
+//盒子阴影颜色
+@box-shadow:0 25px 45px rgba(0,0,0,0.1); 
+
+//列表项的背景颜色
+@list-background-color:rgba(0,0,0,0.1);
+
+//图片的大小
+@img-size:60px;
+
+//序号的颜色
+@rank-color:#03a9f4;
+
+section{
+    //定位
+    position: relative;
+    //大小
+    min-height: 100vh;
+    //样式
+    background: @background-color;
+    //显示
+    overflow: hidden;
+    //布局
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before{
+        content: "";
+        //定位
+        position: absolute;
+        transform: translate(-250px,-120px);
+        //大小
+        width: @red-sun-size-big;
+        height: @red-sun-size-big;
+        border-radius: 50%;
+        //样式
+        background:@red-sun-big-background-color;
+    }
+    &::after{
+        content: "";
+        //定位
+        position: absolute;
+        transform: translate(250px,120px);
+        //大小
+        width: @red-sun-size-small;
+        height: @red-sun-size-small;
+        border-radius: 50%;
+        //样式
+        background:@red-sun-small-background-color;
+    }
+    .box{
+        //定位
+        position: relative;
+        //大小
+        min-width: @box-width;
+        min-height: @box-height;
+        border-radius: 10px;
+        //样式
+        background: @box-background-color;
+        box-shadow: @box-shadow;
+        border: 1px solid @box-border-color;
+        border-right: 1px solid @box-border-right-color;
+        border-bottom: 1px solid @box-border-bottom-color;
+        backdrop-filter:blur(25px);
+        //显示
+        z-index: 2;
+        //边距
+        padding: 20px;
+        h3{
+            //样式
+            color: #fff;
+            //间距
+            margin-bottom: 20px;
+        }
+        .list{
+            //定位
+            position: relative;
+            //布局
+            display: flex;
+            //间距
+            padding: 10px;
+            margin: 10px 0;
+            //样式
+            background: @list-background-color;
+            border-radius: 10px;
+            cursor: pointer;
+            //过渡
+            transition: 0.5s;
+            //显示
+            overflow: hidden;
+            &:hover{
+                //样式
+                background: #fff;
+                box-shadow: -15px 30px 50px rgba(0, 0, 0, 0.5);
+                //放大并向右上方移动
+                transform: scale(1.15) translateX(30px) translateY(-15px);
+                //显示
+                z-index: 1000;
+                .content{
+                    .rank{
+                        right: 20px;
+                    }
+                    h4,p{
+                        color: #333;
+                    }
+                }
+            }
+            .imgBx{
+                //定位
+                position: relative;
+                //大小
+                width: @img-size;
+                height: @img-size;
+                border-radius: 10px;
+                //显示
+                overflow: hidden;
+                //间距
+                margin-right: 10px;
+                img{
+                    //定位
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    //大小
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .content{
+                //布局
+                display: flex;
+                flex-direction: column;
+                // justify-content: center;
+                //样式
+                color: #fff;
+                .rank{
+                    //定位
+                    position: absolute;
+                    right: -50px;
+                    //样式
+                    color: @rank-color;
+                    font-size: 2em;
+                    //过渡
+                    transition: 0.5s;
+                    small{
+                        font-weight: 500;
+                        opacity: 0.25;
+                    }
+                }
+                h4{
+                    line-height: 1.2em;
+                    font-weight: 600;
+                    transition: 0.5s;
+                }
+                p{
+                    font-size: 0.75em;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+}

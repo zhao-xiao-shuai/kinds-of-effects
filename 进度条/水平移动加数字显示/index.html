@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水平进度条加数字</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="./vue.min.js"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <!-- 组件的模板:template上面的id不是样式的id -->
+    <template id="xcprogress">
+        <div class="xcprogress">
+            <div class="xcprogress-bar"
+            :style="{'width':`${value}%`}">
+                <span class="xcprogress-bar-value">
+                    {{value}}
+                </span>
+            </div>
+        </div>
+    </template>
+
+    <!-- vue实例的挂载点 -->
+    <div id="app">
+        <xc-progress :value.sync="value"></xc-progress>
+    </div>
+</body>
+</html>

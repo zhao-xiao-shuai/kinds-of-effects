@@ -1,0 +1,21 @@
+/* ======================头部============== */
+.container .header{
+    /* 大小 */
+    width: 100%;
+    box-sizing: border-box;
+    /* 定位 */
+    text-align: center;
+    /* 间距 */
+    padding: 10px 10px;
+    /* 样式 */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: rgb(230,247,255);
+}
+.container .header span{
+    /* 样式 */
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 2px;
+}

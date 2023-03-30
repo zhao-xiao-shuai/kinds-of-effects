@@ -1,0 +1,138 @@
+/* tab页和主体的背景颜色 */
+/* 底部按钮颜色 */
+/* 容器大小 */
+/* label的高度 */
+/* 主体部分的大小 */
+/* 底部高度 */
+/* 按钮距离底部的距离 */
+body {
+  /* 样式 */
+}
+body .container-UploadDocument {
+  /* 大小 */
+  width: 700px;
+  height: 560px;
+  box-sizing: border-box;
+  /* 样式 */
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  /* 定位 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /*选项卡的切换效果*/
+}
+body .container-UploadDocument #tab1,
+body .container-UploadDocument #tab2 {
+  display: none;
+}
+body .container-UploadDocument #tab1:checked ~ .content {
+  margin-left: 0;
+}
+body .container-UploadDocument #tab2:checked ~ .content {
+  margin-left: -700px;
+}
+body .container-UploadDocument #tab1:checked ~ label[for="tab1"] {
+  color: #ff7875;
+}
+body .container-UploadDocument #tab2:checked ~ label[for="tab2"] {
+  color: #ff7875;
+}
+body .container-UploadDocument #tab1:checked ~ .animation {
+  left: 89px;
+}
+body .container-UploadDocument #tab2:checked ~ .animation {
+  left: 441px;
+}
+body .container-UploadDocument label {
+  /* 定位 */
+  float: left;
+  /* 大小 */
+  width: 50%;
+  height: 40px;
+  box-sizing: border-box;
+  /* 布局 */
+  line-height: 40px;
+  text-align: center;
+  /* 样式 */
+  font-size: 14px;
+  font-weight: 700;
+  /* background: #fff; */
+  background: #e6f7ff;
+  transition: all 0.3;
+  cursor: pointer;
+}
+body .container-UploadDocument .animation {
+  width: 170px;
+  height: 2px;
+  box-sizing: border-box;
+  background: #ff7875;
+  position: absolute;
+  top: 36px;
+  left: 89px;
+  transition: all 0.5s;
+}
+body .container-UploadDocument .content {
+  /* 间距 */
+  margin: 0;
+  padding: 0;
+  /* 定位 */
+  clear: both;
+  /* 大小 */
+  width: 1400px;
+  height: 480px;
+  box-sizing: border-box;
+  /* 过渡 */
+  transition: all 0.5s;
+  /* 样式 */
+  list-style: none;
+  /* 样式 */
+  position: relative;
+}
+body .container-UploadDocument .content .tab {
+  /* 定位 */
+  position: relative;
+  float: left;
+  list-style: none;
+  /* 大小 */
+  width: calc(1400px / 2);
+  height: 480px;
+  box-sizing: border-box;
+  /* 布局 */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* 滚动条 */
+  overflow-y: auto;
+  /* 边距 */
+  padding: 10px;
+}
+body .container-UploadDocument .footer {
+  /* 大小 */
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  /* 布局 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 样式 */
+  background: #e6f7ff;
+}
+body .container-UploadDocument .footer input {
+  /* 大小 */
+  width: 60px;
+  box-sizing: border-box;
+  /* 间距 */
+  padding: 5px;
+  margin: 0 10px;
+  /* 样式 */
+  border: none;
+  outline: none;
+  background: #91d5ff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bolder;
+}

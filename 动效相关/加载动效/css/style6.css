@@ -1,0 +1,49 @@
+.line-container .loading6{
+    animation: loading6 2s infinite linear 0s;
+}
+@keyframes loading6{
+    0%{
+        transform:rotate(0deg)
+    }
+    100%{
+        transform:rotate(360deg)
+    }
+}
+.line-container .loading6 .item{
+    /* 大小 */
+    width: 120px;
+    height: 120px;
+    /* 样式 */
+    background: crimson;
+    /* 动画 */
+    animation: loading-item 2s infinite linear 0s;
+}
+@keyframes loading-item{
+    0%{
+        border-radius: 0;
+    }
+    12.5%{
+        border-bottom-right-radius:60px;
+    }
+    25%{
+        border-radius: 0;
+    }
+    37.5%{
+        border-top-right-radius:60px;
+    }
+    50%{
+        border-radius: 0;
+    }
+    62.5%{
+        border-top-left-radius:60px;
+    }
+    75%{
+        border-radius: 0;
+    }
+    87.5%{
+        border-bottom-left-radius:60px;
+    }
+    100%{
+        border-radius: 0;
+    }
+}

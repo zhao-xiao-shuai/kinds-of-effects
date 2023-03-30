@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+body .container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #007fff;
+  padding: 5px;
+  overflow: hidden;
+}
+body .container .wave {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #007fff;
+}
+body .container .wave::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -30%);
+  width: 400px;
+  height: 400px;
+  border-radius: 40%;
+  background: #ffffff;
+  animation: rotate 12s ease-out infinite;
+}
+body .container .wave::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -30%);
+  width: 430px;
+  height: 430px;
+  border-radius: 47%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: rotate 12s ease-out infinite;
+}
+body .container .wave .bubble {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  opacity: 0.6;
+  animation-name: bubble-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+body .container .wave > .bubble:nth-child(1) {
+  left: 20%;
+  top: 80%;
+  animation-duration: 1.2s;
+}
+body .container .wave > .bubble:nth-child(2) {
+  left: 56%;
+  top: 85%;
+  animation-duration: 2s;
+}
+body .container .wave > .bubble:nth-child(3) {
+  left: 70%;
+  top: 75%;
+  animation-duration: 1.6s;
+}
+body .container .wave > .bubble:nth-child(4) {
+  left: 32%;
+  top: 90%;
+  animation-duration: 1.5s;
+}
+body .container .wave > .bubble:nth-child(5) {
+  left: 85%;
+  top: 69%;
+  animation-duration: 2.2s;
+}
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
+@keyframes bubble-up {
+  25% {
+    transform: translate(12px, -50px);
+  }
+  50% {
+    transform: translate(0, -100px);
+  }
+  75% {
+    transform: translate(-12px, -150px);
+  }
+  100% {
+    transform: translate(0, -200px);
+  }
+}

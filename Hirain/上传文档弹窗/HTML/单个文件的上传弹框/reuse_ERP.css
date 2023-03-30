@@ -1,0 +1,199 @@
+.container-UploadDocument .content .line .reuse-ERP{
+    /* 大小 */
+    width: 60%;
+    height: 100%;
+    box-sizing: border-box;
+    /* 布局 */
+    display: flex;
+    align-items: center;
+}
+
+.container-UploadDocument .content .line .reuse-ERP .reuse-ERP-input{
+    /* 布局 */
+    display: flex;
+    /* 定位 */
+    position: relative;
+}
+.container-UploadDocument .content .line .reuse-ERP .reuse-ERP-input input{
+    /* 大小 */
+    width: var(--input-width);
+    height: 30px;
+    box-sizing: border-box;
+    /* 间距 */
+    margin-left: 5px;
+    padding-left: 5px;
+    /* 样式 */
+    border: 1px solid black;
+    outline: none;
+    font-size: 14px;
+    font-weight: bolder;
+    /* 显示 */
+    z-index: 2;
+}
+.container-UploadDocument .content .line .reuse-ERP .reuse-ERP-input input::placeholder{
+    color: var(--placeholder-color);
+}
+.container-UploadDocument .content .line .reuse-ERP .reuse-ERP-input .cha{
+    /* 大小 */
+    height: 30px;
+    width: 30px;
+    box-sizing: border-box;
+    /* 定位 */
+    position: absolute;
+    right: 0px;
+    /* 样式 */
+    cursor: pointer;
+    background: var(--grey-color);
+    border: 1px solid black;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    /* 显示 */
+    z-index: 3;
+}
+.container-UploadDocument .content .line .reuse-ERP button{
+    /* 大小 */
+    width: 60px;
+    height: 30px;
+    box-sizing: border-box;
+    /* 间距 */
+    padding: 5px;
+    margin: 0 10px;
+    /* 样式 */
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: var(--grey-color);;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bolder;
+    border: 1px solid black;
+    letter-spacing: 1px;
+}
+
+:root{
+    /* ERP相关 */
+    /* 框体高度 */
+    --ERP-content-height:160px;
+    /* 框体宽度:和输入框的宽度一致 */
+    --ERP-content-width:320px;
+    /* 细节高度 */
+    --ERP-datails-height:40px;
+
+    /* tag高度 */
+    --tag-height:40px;
+    /* tag的内边距 */
+    --tag-padding:5px;
+    /* tag背景颜色 */
+    --tag-background-color:#F2F2F2;
+    /* tag边框颜色 */
+    --tag-border-color:#e3e1e1;
+
+    /* 叉号的背景颜色 */
+    --tag-cha-background-color:#dfdfdf;
+    /* 叉号的大小 */
+    --tag-cha-width:20px;
+    --tag-cha-height:20px;
+
+    /* 按钮背景颜色 */
+    --ERP-button-background-color:rgb(230,247,255);
+
+    /* input标签内placeholder的字体颜色 */
+    --placeholder-color:#bbbbbb;
+}
+
+/* 已添加复用ERP号的展示部分 */
+.container-UploadDocument .content .addERPs{
+    /* 布局 */
+    display: flex;
+    flex-direction: column;
+    /* 大小 */
+    width: var(--ERP-content-width);
+    box-sizing: border-box;
+    /* 定位 */
+    position: relative;
+    left: calc(30% + 5px + 2px);
+}
+
+/* 框体部分 */
+.container-UploadDocument .content .addERPs .ERP-content{
+    /* 大小 */
+    width: 100%;
+    height: var(--ERP-content-height);
+    box-sizing: border-box;
+    /* 样式 */
+    border: 1px solid black;
+    /* 自动出现滚动条 */
+    overflow-y: auto;
+}
+.container-UploadDocument .content .addERPs .ERP-content .tag{
+    /* 样式 */
+    background: var(--tag-background-color);
+    border: 1px solid var(--tag-border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    /* 间距 */
+    margin: 5px;
+    padding: 0 5px;
+    /* 大小 */
+    height: 32px;
+    box-sizing: border-box;
+    /* 布局 */
+    display: inline-block;
+    /* 定位 */
+    position: relative;
+    line-height: 30px;
+}
+.container-UploadDocument .content .addERPs .ERP-content .tag img{
+    /* 大小 */
+    width: var(--tag-cha-width);
+    height: var(--tag-cha-height);
+    border-radius: 50%;
+    /* 间距 */
+    margin-left: 5px;
+    /* 样式 */
+    cursor: pointer;
+    background: var(--tag-cha-background-color);
+    /* 定位 */
+    position: relative;
+    top: 5px;
+}
+
+/* 细节部分 */
+.container-UploadDocument .content .addERPs .ERP-details{
+    /* 布局 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 大小 */
+    height: var(--ERP-datails-height);
+    width: var(--ERP-content-width);
+}
+.container-UploadDocument .content .addERPs .ERP-details p{
+    font-size: 12px;
+}
+.container-UploadDocument .content .addERPs .ERP-details span{
+    font-size: 14px;
+    font-weight: bolder;
+    color: blue;
+}
+.container-UploadDocument .content .addERPs .ERP-details button{
+    width: 80px;
+    height: 35px;
+    box-sizing: border-box;
+    /* 样式 */
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: blue;
+    /* 过渡 */
+    transition: all 0.3s;
+}
+.container-UploadDocument .content .addERPs .ERP-details button:hover{
+    color: red;
+}

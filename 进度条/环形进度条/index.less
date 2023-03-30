@@ -1,0 +1,214 @@
+:root{
+    --primary-light:#39ddfa;
+    --primary:#00abdf;
+    --primary-dark:#008ada;
+
+    --white:#FFFFFF;
+    --greyLight-1:#ebf5fc;
+    --greyLight-2:#d5e0f3;
+    --greyLight-3:#c1d9f0;
+    --greyDark:#646b8c;
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // outline: 1px dashed maroon;
+}
+
+html{
+    font-size: 10px;
+}
+
+.container{
+    //大小
+    min-height: 100vh;
+    //布局
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //样式
+    background: var(--greyLight-2);
+    .card{
+        //大小
+        width: 34rem;
+        border-radius: 2rem;
+        //样式
+        background: var(--greyLight-1);
+        box-shadow: 0px 20px 30px rgba(100, 131, 177, 0.2);
+        //边距
+        padding: 5rem;
+        border: 1px solid white;
+        .card__percent{
+            //定位
+            position: relative;
+            //布局
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                //大小
+                width: 24rem;
+                height: 24rem;
+                //显示
+                z-index: 1;
+                //位置
+                transform: rotate(-90deg);
+                circle{
+                    fill:none;
+                    stroke-linecap: round;
+                    transform: translate(3rem,3rem);
+                    stroke-dasharray: 565.2;
+                    stroke-dashoffset: 282.6;
+                    transition: all 1s ease;
+                    stroke-width: 24;
+                }
+            }
+            .circle{
+                //定位
+                position: absolute;
+                //大小
+                width: 23rem;
+                height: 23rem;
+                border-radius: 50%;
+                //样式
+                box-shadow: 6px 6px 8px var(--greyLight-2), 
+                -6px -6px 8px var(--white);
+            }
+            .circle.circle__medium{
+                //大小
+                width: 20.5rem;
+                height: 20.5rem;
+                //样式
+                box-shadow: inset 8px 8px 10px var(--greyLight-2),
+                inset -4px -4px 8px var(--white);
+            }
+            .circle.circle__small{
+                //大小
+                width: 15.5rem;
+                height: 15.5rem;
+                //样式
+                box-shadow: 6px 6px 8px var(--greyLight-2),
+                -2px -2px 8px var(--white);
+            }
+            .card__number{
+                position: absolute;
+                color: var(--greyDark);
+                font-size: 3.6rem;
+            }
+        }
+    }
+    .form{
+        //间距
+        padding: 4rem;
+        margin-left: 4rem;
+        //布局
+        display: grid;
+        grid-template-columns: 40% 60%;
+        //大小
+        border-radius: 2rem;
+        //样式
+        background: var(--greyLight-1);
+        text-align: center;
+        box-shadow: 0px 20px 30px rgba(100, 131, 177, 0.2);
+        border: 1px solid var(--white);
+        //定位
+        position: relative;
+        input{
+            //样式
+            border: none;
+            outline: none;
+            background: none;
+            //大小
+            width: 5rem;
+            border-radius: 1rem;
+            //样式
+            font-size: 1.6rem;
+            text-align: center;
+            color: var(--primary);
+            box-shadow: inset 0.2rem 0.2rem 0.4rem var(--greyLight-2),
+            inset -0.3rem -0.3rem 4rem var(--white);
+            //间距
+            padding: 0.8rem;
+            margin-right: 1rem;
+            &::placeholder{
+                color: var(--greyLight-3);
+            }
+            &:focus{
+                color: var(--primary);
+                box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-3);
+            }
+        }
+        .form__btn{
+            //样式
+            border: none;
+            outline: none;
+            letter-spacing: 0.8px;
+            background: var(--greyLight-1);
+            color: var(--white);
+            cursor: pointer;
+            background: linear-gradient(-25deg,var(--primary) 0%,
+            var(--primary-light) 100%);
+            //间距
+            padding: 0.8rem 2rem;
+            margin-left: 1rem;
+            border-radius: 2rem;
+            &:hover{
+                background: linear-gradient(-25deg, var(--primary-dark) 0%,
+                var(--primary) 100%);
+            }
+        }
+        .tooltip{
+            //定位
+            position: absolute;
+            bottom: -5.2rem;
+            //布局
+            display: flex;
+            align-items: center;
+            //间距
+            margin-left: 1rem;
+            padding: 1rem 2rem;
+            //大小
+            border-radius: 1rem;
+            //样式
+            background: var(--greyLight-1);
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            opacity: 0;
+            transition: all 0.3s ease;
+            .tooltip__text{
+                margin-left: 0.6trm;
+            }
+            &::after{
+                content:"";
+                //定位
+                position: absolute;
+                left: 52%;
+                bottom: 72%;
+                //大小
+                width: 2rem;
+                height: 2rem;
+                //样式
+                background: var(--greyLight-1);
+                clip-path: polygon(0% 0%,100% 100%,0% 100%);
+                transform: rotate(135deg);
+                border-radius: 0 0 0 0.4rem;
+            }
+        }
+        .tooltip.fade-in{
+            animation: fadeIn 0.8s ease;
+        }
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        transform: translateY(-40px) scale(0.5);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}

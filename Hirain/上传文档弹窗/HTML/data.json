@@ -1,0 +1,29 @@
+{
+    "UserMapping":{
+        "jindan.yu":{
+            "PublicAccount":"BJ-CAE",
+            "Description":"AE北京机械结构部"
+        },
+        "jindan.yu1":{
+            "PublicAccount":"BJ-CAE",
+            "Description":"AE北京机械结构部"
+        },
+        "jindan.yu2":{
+            "PublicAccount":"BJ-CAE",
+            "Description":"AE北京机械结构部"
+        },
+        "jindan.yu3":{
+            "PublicAccount":"BJ-CAE",
+            "Description":"AE北京机械结构部"
+        },
+        "hao.sun":{
+            "PublicAccount":"BJ-CAE",
+            "Description":"AE北京机械结构部"
+        },
+        "ting.qiao":{
+            "PublicAccount":"BJ-CAE",
+            "Description":"AE北京机械结构部"
+        }
+    },
+    "Description":"实际账号和公共账号的映射关系"
+}

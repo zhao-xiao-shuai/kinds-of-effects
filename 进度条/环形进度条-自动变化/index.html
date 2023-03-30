@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>环形滚动条</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./vue.min.js"></script>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <template id="progress-bar">
+        <div class="circle">
+            <div class="word">
+                <span id="word">0</span>
+                %
+            </div>
+            <div class="left-box">
+                <div class="left"></div>
+            </div>
+            <div class="right-box">
+                <div class="right"></div>
+            </div>
+        </div>
+    </template>
+
+    <div id="app">
+        <progress-bar :value="value"></progress-bar>
+    </div>
+
+</body>
+</html>

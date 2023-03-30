@@ -1,0 +1,33 @@
+/* ======================底部============== */
+.container .footer{
+    /* 大小 */
+    width: 100%;
+    /* 布局 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 间距 */
+    padding: 10px 0;
+    /* 样式 */
+    background:rgb(230,247,255);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.container .footer input{
+    /* 样式 */
+    outline: none;
+    background: var(--grey);
+    border: 1px solid black;
+    /* border: none; */
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    color: black;
+    /* 大小 */
+    width: 60px;
+    height: 30px;
+    /* 间距 */
+    margin: 0 10px;
+}

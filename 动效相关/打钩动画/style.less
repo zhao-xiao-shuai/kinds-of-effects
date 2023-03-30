@@ -1,0 +1,69 @@
+
+.container{
+    //大小
+    width: 800px;
+    height: 800px;
+    box-sizing: border-box;
+    //布局
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 36px;
+        margin-top: 40px;
+        color: #333;
+        opacity: 0;
+    }
+    input[type="checkbox"]:checked ~ h2{
+        animation: title 0.6s ease-in-out 1s forwards;
+    }
+    .circle{
+        stroke-dasharray: 2*3.14*190+2;
+        // stroke-dasharray: 1194;
+        // stroke-dashoffset: 0;
+        stroke-dashoffset: 2*3.14*190+2;
+        // stroke-dashoffset: 1194;
+        transform: rotate(-90deg);
+        transform-origin: center;
+    }
+    //less里面怎么使用会+选择器?
+    //和css是一样的
+    input[type="checkbox"]:checked + svg .circle{
+        animation: circle 1s ease-in-out forwards;
+    }
+    .tick{
+        stroke-dasharray: 350;
+        stroke-dashoffset: 0;
+        stroke-dashoffset: 350;
+    }
+    input[type="checkbox"]:checked + svg .tick{
+        animation: tick 0.8s ease-in-out forwards 0.95s;
+    }
+}
+
+@keyframes circle{
+    from{
+        stroke-dashoffset: 2*3.14*190+2;
+    }
+    to{
+        stroke-dashoffset: 4*3.14*190+4;
+    }
+}
+@keyframes tick{
+    from{
+        stroke-dashoffset: 350;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes title{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

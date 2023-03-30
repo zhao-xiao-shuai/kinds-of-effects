@@ -1,0 +1,167 @@
+:root {
+  --primary-light: #39ddfa;
+  --primary: #00abdf;
+  --primary-dark: #008ada;
+  --white: #FFFFFF;
+  --greyLight-1: #ebf5fc;
+  --greyLight-2: #d5e0f3;
+  --greyLight-3: #c1d9f0;
+  --greyDark: #646b8c;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--greyLight-2);
+}
+.container .card {
+  width: 34rem;
+  border-radius: 2rem;
+  background: var(--greyLight-1);
+  box-shadow: 0px 20px 30px rgba(100, 131, 177, 0.2);
+  padding: 5rem;
+  border: 1px solid white;
+}
+.container .card .card__percent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .card .card__percent svg {
+  width: 24rem;
+  height: 24rem;
+  z-index: 1;
+  transform: rotate(-90deg);
+}
+.container .card .card__percent svg circle {
+  fill: none;
+  stroke-linecap: round;
+  transform: translate(3rem, 3rem);
+  stroke-dasharray: 565.2;
+  stroke-dashoffset: 282.6;
+  transition: all 1s ease;
+  stroke-width: 24;
+}
+.container .card .card__percent .circle {
+  position: absolute;
+  width: 23rem;
+  height: 23rem;
+  border-radius: 50%;
+  box-shadow: 6px 6px 8px var(--greyLight-2), -6px -6px 8px var(--white);
+}
+.container .card .card__percent .circle.circle__medium {
+  width: 20.5rem;
+  height: 20.5rem;
+  box-shadow: inset 8px 8px 10px var(--greyLight-2), inset -4px -4px 8px var(--white);
+}
+.container .card .card__percent .circle.circle__small {
+  width: 15.5rem;
+  height: 15.5rem;
+  box-shadow: 6px 6px 8px var(--greyLight-2), -2px -2px 8px var(--white);
+}
+.container .card .card__percent .card__number {
+  position: absolute;
+  color: var(--greyDark);
+  font-size: 3.6rem;
+}
+.container .form {
+  padding: 4rem;
+  margin-left: 4rem;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  border-radius: 2rem;
+  background: var(--greyLight-1);
+  text-align: center;
+  box-shadow: 0px 20px 30px rgba(100, 131, 177, 0.2);
+  border: 1px solid var(--white);
+  position: relative;
+}
+.container .form input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 5rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--primary);
+  box-shadow: inset 0.2rem 0.2rem 0.4rem var(--greyLight-2), inset -0.3rem -0.3rem 4rem var(--white);
+  padding: 0.8rem;
+  margin-right: 1rem;
+}
+.container .form input::placeholder {
+  color: var(--greyLight-3);
+}
+.container .form input:focus {
+  color: var(--primary);
+  box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-3);
+}
+.container .form .form__btn {
+  border: none;
+  outline: none;
+  letter-spacing: 0.8px;
+  background: var(--greyLight-1);
+  color: var(--white);
+  cursor: pointer;
+  background: linear-gradient(-25deg, var(--primary) 0%, var(--primary-light) 100%);
+  padding: 0.8rem 2rem;
+  margin-left: 1rem;
+  border-radius: 2rem;
+}
+.container .form .form__btn:hover {
+  background: linear-gradient(-25deg, var(--primary-dark) 0%, var(--primary) 100%);
+}
+.container .form .tooltip {
+  position: absolute;
+  bottom: -5.2rem;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background: var(--greyLight-1);
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.container .form .tooltip .tooltip__text {
+  margin-left: 0.6trm;
+}
+.container .form .tooltip::after {
+  content: "";
+  position: absolute;
+  left: 52%;
+  bottom: 72%;
+  width: 2rem;
+  height: 2rem;
+  background: var(--greyLight-1);
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+  transform: rotate(135deg);
+  border-radius: 0 0 0 0.4rem;
+}
+.container .form .tooltip.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateY(-40px) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

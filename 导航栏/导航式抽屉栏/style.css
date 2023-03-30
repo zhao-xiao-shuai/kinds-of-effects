@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "iconfont"; /* Project id 2697032 */
+    src: url('iconfont.woff2?t=1633961736147') format('woff2'),
+         url('iconfont.woff?t=1633961736147') format('woff'),
+         url('iconfont.ttf?t=1633961736147') format('truetype');
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #6843d1;
+    height: 100vh;
+}
+.container{
+    /* 大小 */
+    width: 300px;
+    height: 420px;
+    /* 定位 */
+    position: absolute;
+    left: 50%;;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* 样式 */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* 过渡 */
+    transition: 0.5s;
+}
+.container.active{
+    width: 80px;
+}
+.container .navigation{
+    position: relative;
+}
+.container .navigation a{
+    /* 大小 */
+    width: 100%;
+    height: 60px;
+    /* 定位:独占一行 */
+    display: flex;    
+    /* 样式 */
+    text-decoration: none;
+}
+.container .navigation a:hover{
+    background-color: red;
+}
+.container .navigation a:first-child{
+    border-radius: 10px 10px 0 0;
+}
+.container .navigation a:last-child{
+    border-radius: 0 0 10px 10px;
+}
+.container .navigation a .icon{
+    /* 大小:最小宽度 */
+    min-width: 80px;
+    /* 定位 */
+    text-align: center;
+    line-height: 60px;
+}
+.container .navigation a .icon i{
+    /* 图标样式 */
+    font-size: 28px;
+    font-weight: bolder;
+    color: #6843d1;
+}
+.container .navigation a .title{
+    /* 文字样式 */
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    line-height: 60px;
+    /* 文字太长的处理 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.container .toggle{
+    /* 大小 */
+    width: 40px;
+    height: 40px;
+    /* 样式 */
+    border-radius: 50%;
+    background-color: #fff;
+    border: 5px solid #6843d1;
+    cursor: pointer;
+    /* 定位 */
+    position: absolute;
+    top: calc(50% - 20px);
+    right: -20px;
+}
+.container .toggle::before{
+    /* 图标 */
+    content: "\e692";
+    font-family: "iconfont";
+    /* 大小 */
+    width: 100%;
+    height: 100%;
+    /* 定位 */
+    position: absolute;
+    line-height: 30px;
+    text-align: center;
+    /* 样式 */
+    font-weight: bolder;
+}
+.container .toggle.active::before{
+    content: "\e690";
+}
+

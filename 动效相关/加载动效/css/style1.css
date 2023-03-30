@@ -1,0 +1,20 @@
+/* 动画 */
+.line-container .loading1{
+    animation: loading1 1s infinite linear;
+}
+.line-container .loading1 .item{
+    stroke: crimson;
+    stroke-width: 10px;
+    stroke-dasharray: 100;
+    fill: none;
+    stroke-linecap: round;
+}
+@keyframes loading1 {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+

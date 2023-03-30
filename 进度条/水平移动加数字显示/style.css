@@ -1,0 +1,30 @@
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app .xcprogress {
+  width: 300px;
+  height: 20px;
+  background: #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+#app .xcprogress .xcprogress-bar {
+  width: 0;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: cornflowerblue;
+  transition: width 0.6s ease;
+  border-radius: 4px;
+}
+#app .xcprogress .xcprogress-bar .xcprogress-bar-value {
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  margin-right: 5px;
+}

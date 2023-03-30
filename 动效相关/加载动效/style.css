@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: rgb(55, 40, 65);
+    height: 100vh;
+}
+.line-container{
+    /* 大小 */
+    width: 900px;
+    height: 300px;
+    /* 布局 */
+    display: flex;
+    justify-content: center;
+}
+.line-container .loading{
+    /* 大小 */
+    width: 300px;
+    height: 100%;
+    /* 布局 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

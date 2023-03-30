@@ -1,0 +1,76 @@
+/* 左侧 */
+.middle .left{
+    /* 样式 */
+    border-right: 1px solid var(--border-color);
+    /* 间距 */
+    padding-right: 10px;
+    /* 布局 */
+    display: flex;
+    flex-direction: column;
+}
+
+.middle .left .line{
+    /* 大小 */
+    width: 100%;
+    height: var(--line-left-height);
+    box-sizing: border-box;
+    /* 定位 */
+    line-height: var(--line-left-height);
+    /* 间距 */
+    padding-left: 5px;
+}
+.middle .left .line span{
+    /* 样式 */
+    font-size: 14px;
+    font-weight: bolder;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.middle .left .DocumentName{
+    /* 样式 */
+    background: var(--box-background);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bolder;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    /* 间距 */
+    padding: var(--file-padding-up-down) var(--file-padding-left-right);
+}
+
+
+.middle .left .already-area{
+    /* 布局 */
+    display: flex;
+    flex-direction: column;
+}
+/* .middle .left .already-area .row{
+    margin-bottom: 10px;
+    padding: var(--file-padding-up-down) var(--file-padding-left-right);
+    background: var(--box-background);
+    list-style: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.middle .left .already-area .row img{
+    width: var(--document-img-width);
+    height: var(--document-img-height);
+
+}
+.middle .left .already-area .row .details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+.middle .left .already-area .row .name{
+    font-size: 14px;
+    font-weight: bolder;
+}
+.middle .left .already-area .row .size{
+    font-size: 12px;
+} */

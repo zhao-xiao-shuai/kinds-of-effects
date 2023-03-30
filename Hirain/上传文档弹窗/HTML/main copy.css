@@ -1,0 +1,72 @@
+:root{
+    /* tab页和主体的背景颜色 */
+    --background-color:#e6f7ff;
+    /* 底部按钮颜色 */
+    --button-color:#91d5ff;
+
+    /* 容器大小 */
+    --container-width:700px;
+    --container-height:560px;
+
+    /* label的高度 */
+    --label-height:40px;
+
+    /* 主体部分的大小 */
+    --content-width: 1400px;
+    --content-height: 480px;
+
+    /* 底部高度 */
+    --footer-height:40px;
+    /* 按钮距离底部的距离 */
+    --footer-bottom:10px;
+}
+body{
+    /* 大小 */
+    /* width: 100vw;
+    height: 100vh;
+    box-sizing: border-box; */
+    /* 布局 */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+}
+
+
+
+/* =============================tab====================== */
+#tab1,#tab2{
+    display: none;
+}
+.container-UploadDocument label{
+
+}
+
+/* ===========================主体部分==================== */
+.container-UploadDocument .content{
+
+}
+.container-UploadDocument .content .tab{
+
+}
+
+
+
+/* ===========================底部按钮===================== */
+.container-UploadDocument 
+.container-UploadDocument .footer input{
+    /* 大小 */
+    width: 60px;
+    box-sizing: border-box;
+    /* 间距 */
+    padding: 5px;
+    margin: 0 10px;
+    /* 样式 */
+    border: none;
+    outline: none;
+    background: var(--button-color); 
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bolder;
+}

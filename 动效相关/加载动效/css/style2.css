@@ -1,0 +1,96 @@
+/* wrapper相当于第二个加载效果的容器 */
+.line-container .loading2 .wrapper{
+    /* 大小 */
+    height: 100%;
+    width: 100%;
+    /* 布局 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line-container .loading2 .wrapper .item{
+    /* 样式 */
+    background: crimson;
+    /* 大小 */
+    width: 15px;
+    /* 间距 */
+    margin: 0 5px;
+    /* 定位 */
+    position: relative;
+}
+/* 上半段 */
+.line-container .loading2 .wrapper .item::before{
+    content: "";
+    /* 大小 */
+    height: 50px;
+    width: 15px;
+    /* 定位 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* 样式 */
+    background: crimson;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+/* 下半段 */
+.line-container .loading2 .wrapper .item::after{
+    content: "";
+    /* 大小 */
+    height: 50px;
+    width: 15px;
+    /* 定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 样式 */
+    background: crimson;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+/* 上半段的动画效果 */
+.loading2 .wrapper .item:nth-child(1)::before{
+    animation: loading2 2s infinite;
+}
+.loading2 .wrapper .item:nth-child(2)::before{
+    animation: loading2 2s infinite 0.2s;
+}
+.loading2 .wrapper .item:nth-child(3)::before{
+    animation: loading2 2s infinite 0.4s;
+}
+.loading2 .wrapper .item:nth-child(4)::before{
+    animation: loading2 2s infinite 0.6s;
+}
+.loading2 .wrapper .item:nth-child(5)::before{
+    animation: loading2 2s infinite 0.8s;
+}
+
+/* 下半段的动画效果 */
+.loading2 .wrapper .item:nth-child(1)::after{
+    animation: loading2 2s infinite;
+}
+.loading2 .wrapper .item:nth-child(2)::after{
+    animation: loading2 2s infinite 0.2s;
+}
+.loading2 .wrapper .item:nth-child(3)::after{
+    animation: loading2 2s infinite 0.4s;
+}
+.loading2 .wrapper .item:nth-child(4)::after{
+    animation: loading2 2s infinite 0.6s;
+}
+.loading2 .wrapper .item:nth-child(5)::after{
+    animation: loading2 2s infinite 0.8s;
+}
+
+/* 动画定义 */
+@keyframes loading2 {
+    0%{
+        height: 50px;
+    }
+    50%{
+        height: 10px;
+    }
+    100%{
+        height: 50px;
+    }
+}

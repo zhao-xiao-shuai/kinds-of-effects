@@ -1,0 +1,159 @@
+
+//选项的边框颜色
+@border-color:#333;
+//选项的高度
+@option-height:50px;
+
+//容器宽度
+@container-width:240px;
+
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+// *,
+// *:after,
+// *:before {
+//     box-sizing: border-box;
+// }
+// * {
+//     outline: none;
+// }
+// ::-webkit-scrollbar {
+//     display: none;
+// }
+
+.container{
+    //大小
+    height: 300px;
+    width: @container-width;
+    box-sizing: border-box;
+    //样式
+    border: 1px solid red;
+    .cusSelBlock{
+        //大小
+        height: @option-height;
+        width: 100%;
+        //布局
+        display: inline-block;
+        //定位
+        position: relative;
+        #cusSelectbox{
+            //大小
+            height: 100%;
+            width: 100%;
+            .option{
+                //大小
+                height: @option-height;
+                width: 100%;
+                //布局
+                display: inline-block;
+                position: relative;
+                // perspective: 800px;
+            }
+        }
+        .s-hidden {
+            visibility: hidden;
+        }
+
+        .select-label{
+            //定位
+            position: absolute;
+            left:0;
+            top:0;
+            //显示
+            z-index: 9999;
+            //样式
+            background: #fff;
+            border: 1px solid @border-color;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            color: @border-color;
+            cursor: pointer;
+            letter-spacing: 2px;
+            //布局
+            display: block;
+            line-height: @option-height;
+            text-align: left;
+            //大小
+            width: 100%;
+            height: @option-height;
+            box-sizing: border-box;
+            //间距
+            padding: 0 50px 0 20px;
+            .select-label-box{
+                //大小
+                width: @option-height;
+                height: 100%;
+                box-sizing: border-box;
+                //定位
+                position: absolute;
+                top: 0;
+                right: 0;
+                //布局
+                text-align: center;
+                line-height: @option-height;
+                //样式
+                border-left: 1px solid @border-color;;
+                i{
+                    //样式
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .options{
+            //间距
+            margin: 0;
+            padding: 0;
+            //定位
+            position: absolute;
+            top: 50px;
+            //大小
+            height: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            li{
+                //边距
+                padding: 0;
+                margin: 0;
+                //样式
+                background-color: #ffffff;
+                border-left: 1px solid #333;
+                border-right: 1px solid #333;
+                border-bottom: 1px solid #333;
+                cursor: pointer;
+                list-style: none;
+                //布局
+                display: block;
+                line-height: 50px;
+                text-align: left;
+                //边距
+                padding: 0 50px 0 20px;
+                //过渡
+                transition: -webkit-transform 300ms ease;
+                transition: transform 300ms ease;
+                transition: transform 300ms ease, -webkit-transform 300ms ease;
+                //定位
+                position: absolute;
+                top: -50px;
+                left: 0;
+                //显示
+                z-index: 0;
+                //大小
+                height: 50px;
+                width: 100%;
+                box-sizing: border-box;
+                &:hover{
+                    background-color: #333;
+                    color: #fff;
+                }
+            }
+            .active{
+                background-color: #333;
+                color: #fff;
+            }
+        }
+    }
+}
+
+

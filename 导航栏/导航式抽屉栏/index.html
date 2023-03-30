@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航式抽屉栏</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <a href="#">
+                <div class="icon">
+                    <i class="icon-messagefill iconfont"></i>
+                </div>
+                <span class="title">Message</span>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <i class="icon-settings iconfont"></i>
+                </div>
+                <span class="title">Settings</span>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <i class="icon-question-circle-fill iconfont"></i>
+                </div>
+                <span class="title">Question</span>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <i class="icon-Lock iconfont"></i>
+                </div>
+                <span class="title">Password</span>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <i class="icon-sign-out iconfont"></i>
+                </div>
+                <span class="title">Sign Out</span>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <i class="icon-user-fill iconfont"></i>
+                </div>
+                <span class="title">User</span>
+            </a>
+            <a href="#">
+                <div class="icon">
+                    <i class="icon-home iconfont"></i>
+                </div>
+                <span class="title">Homessssssssssssssssssssssssss</span>
+            </a>
+        </div>
+        <div class="toggle"></div>
+    </div>
+    <script>
+        let container=document.querySelector(".container");
+        let toggle=document.querySelector(".toggle");
+        toggle.addEventListener("click",()=>{
+            toggle.classList.toggle("active");
+            container.classList.toggle("active");
+        })
+    </script>
+</body>
+</html>

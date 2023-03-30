@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    /* 动效条的背景颜色,a标签文字的背景颜色 */
+    --animation-color:#ff7875;
+    /* a标签的高度 */
+    --a-height:50px;
+    /* 动效的高度 */
+    --animation-height:5px;
+}
+body{
+    /* 样式 */
+    background-color: var(--color1);
+    /* 大小 */
+    height: 100vh;
+    /* 布局 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    /* 样式 */
+    font-size: 0;
+    border-radius: 10px 10px 0 0;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    /* 大小 */
+    height: var(--a-height);
+    /* 定位 */
+    position: relative;
+    /* 显示 */
+    z-index: 0;
+}
+nav a{
+    /* 布局 */
+    display: inline-block;
+    /* 定位 */
+    position: relative;
+    line-height: var(--a-height);
+    /* 大小 */
+    padding: 0 10px;
+    /* 样式 */
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+    /* 显示 */
+    z-index: 2;
+    /* 过渡 */
+    transition: all 0.3s;
+}
+nav .active{
+    color:var(--animation-color);
+}
+nav a:nth-child(1){
+    width: 100px;
+}
+nav a:nth-child(2){
+    width: 100px;
+}
+nav a:nth-child(3){
+    width: 100px;
+}
+nav a:nth-child(4){
+    width: 160px;
+}
+nav a:nth-child(5){
+    width: 140px;
+}
+nav .animation{
+    /* 样式 */
+    background: var(--animation-color);
+    border-radius: 10px;
+    /* 定位 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* 大小 */
+    height: var(--animation-height);
+    width: 100px;
+    /* 显示 */
+    z-index: 1;
+    /* 过渡 */
+    transition: all 0.5s;
+}
+
+
+
+
+
