@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>原生js中设置抖动</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                box-sizing: border-box;
+                border: 1px solid red;
+            }
+
+            @keyframes shake {
+                10%,
+                90% {
+                    transform: translate3d(-1px, 0, 0);
+                }
+                20%,
+                80% {
+                    transform: translate3d(2px, 0, 0);
+                }
+                30%,
+                50%,
+                70% {
+                    transform: translate3d(-4px, 0, 0);
+                }
+                40%,
+                60% {
+                    transform: translate3d(4px, 0, 0);
+                }
+            }
+            .apply-shake {
+                animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <button onclick="handleClick()">apply-shake</button>
+        <script>
+            function handleClick() {
+                console.log("点击");
+                const box = document.querySelector(".box");
+                if (!box.classList.contains("apply-shake")) {
+                    box.classList.add("apply-shake");
+                }
+                setTimeout(() => {
+                    box.classList.remove("apply-shake");
+                }, 820);
+            }
+        </script>
+    </body>
+</html>

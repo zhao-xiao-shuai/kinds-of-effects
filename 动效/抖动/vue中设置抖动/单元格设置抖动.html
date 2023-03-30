@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>单元格设置抖动</title>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+        />
+        <style>
+            .row {
+                cursor: pointer;
+            }
+            .checked-row {
+                background-color: #40a0ff1e;
+            }
+            .checked-column {
+                text-align: center;
+                color: #409eff;
+                font-size: 16px;
+            }
+            @keyframes shake {
+                10%,
+                90% {
+                    transform: translate3d(-1px, 0, 0);
+                }
+                20%,
+                80% {
+                    transform: translate3d(2px, 0, 0);
+                }
+                30%,
+                50%,
+                70% {
+                    transform: translate3d(-4px, 0, 0);
+                }
+                40%,
+                60% {
+                    transform: translate3d(4px, 0, 0);
+                }
+            }
+            .apply-shake {
+                animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+        <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+        <script>
+            new Vue({
+                el: "#app",
+                template: `
+                <div>
+                    <el-table
+                    :data="tableData"
+                    @row-click="checkRow"
+                    :row-class-name="tableRowClassName"
+                    style="width: 100%">
+                    <el-table-column
+                        prop="checked"
+                        label=""
+                        class-name="checked-column"
+                        width="40">
+                        <template slot-scope="scope">
+                            <i v-if="scope.row.checked" class="el-icon-success"></i>
+                        </template>
+                    </el-table-column>
+                    <el-table-column
+                        prop="name"
+                        label="姓名"
+                        width="100">
+                    </el-table-column>
+                    <el-table-column
+                        prop="gender"
+                        label="性别"
+                        width="80">
+                        <template slot-scope="scope">
+                            <div :class="{ 'apply-shake': scope.row.shake }">
+                            {{scope.row.gender}}
+                            </div>
+                        </template>
+                    </el-table-column>
+                </el-table>
+                </div>
+            `,
+                data() {
+                    return {
+                        tableData: [
+                            {
+                                name: "张三",
+                                gender: "男",
+                                checked: false,
+                                shake: false,
+                            },
+                            {
+                                name: "王五",
+                                gender: "女",
+                                checked: false,
+                                shake: false,
+                            },
+                        ],
+                    };
+                },
+                methods: {
+                    checkRow(row) {
+                        if (row.gender === "女") {
+                            row.shake = true;
+                            setTimeout(() => {
+                                row.shake = false;
+                            }, 820);
+                            return;
+                        }
+                        row.checked = !row.checked;
+                    },
+                    tableRowClassName({ row }) {
+                        if (row.checked) {
+                            return "row checked-row";
+                        }
+                        return "row";
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>

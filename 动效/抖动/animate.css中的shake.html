@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>animate.css中的shake</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+    </head>
+    <body>
+        <div id="app">
+            <button @click="handleClick">apply-shake</button>
+            <h1 :class="{'animate__animated animate__headShake':shakeOrNot}">
+                shake文本
+            </h1>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+        <script>
+            new Vue({
+                el: "#app",
+                data() {
+                    return {
+                        shakeOrNot: false,
+                        shakeId: null,
+                    };
+                },
+                methods: {
+                    handleClick() {
+                        if (this.shakeId) {
+                            this.shakeOrNot = false;
+                            clearTimeout(this.shakeId);
+                        }
+                        this.shakeOrNot = true;
+                        this.shakeId = setTimeout(() => {
+                            this.shakeOrNot = false;
+                            clearTimeout(this.shakeId);
+                        }, 820);
+                    },
+                },
+            });
+        </script>
+    </body>
+</html>
