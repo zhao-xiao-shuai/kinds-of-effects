@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ggk{
+            width: 400px;
+            height: 100px;
+            position: relative;
+            /* border: 1px solid black; */
+        }
+        .text{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 24px;
+            font-weight: bolder;
+            text-align: center;
+            line-height: 100px;
+        }
+        .canvas{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="ggk">
+        <div class="text"></div>
+        <canvas class="canvas" width="400" height="100"></canvas>
+    </div>
+    <script>
+
+        const ggk = document.querySelector(".ggk");
+        const canvas = ggk.querySelector(".canvas");
+        const ctx = canvas.getContext("2d");
+        const text = ggk.querySelector(".text");
+
+        //将canvas填充为灰色
+        ctx.fillStyle = '#dfe6e9';
+        ctx.fillRect(0,0,400,100);
+
+        //刮刮卡这几个文字的样式
+        ctx.font = "bolder 24px 微软雅黑";
+        ctx.fillStyle = "#fff";
+
+        //计算刮刮卡这三个字的绘制起点
+        const width = ctx.measureText("刮刮卡").width;
+        const left = (400 - width)/2;
+
+        //在画布上写刮刮卡
+        ctx.fillText('刮刮卡',left,60);
+
+        //是否按下鼠标在涂抹
+        let isDraw = false;
+
+        //按下鼠标的时候,开启涂抹
+        canvas.addEventListener("mousedown",()=>{
+            isDraw = true;
+        })
+
+        //松开鼠标的时候,放弃涂抹
+        canvas.addEventListener("mouseup",()=>{
+            isDraw = false;
+        })
+
+        //鼠标移动的时候,如果处于涂抹状态,进行涂抹的操作
+        canvas.addEventListener("mousemove",(e)=>{
+            if (isDraw) {
+                draw(e);
+            }
+        })
+
+        function draw(e){
+            //获取鼠标相对于canvas的位置
+            const left = e.pageX - ggk.offsetLeft;
+            const top = e.pageY - ggk.offsetTop;
+
+            //设置涂抹方式
+            //destination的含义:
+            //在源图像外部显示目标图像,源图像是透明的
+            ctx.globalCompositeOperation = 'destination-out';
+
+            //以鼠标位置为圆心画圆
+            ctx.arc(left, top, 20, 0, 2*Math.PI);
+            ctx.fill();
+        }
+
+        //获取中奖文本
+        const prizeText = getPrizeText();
+        console.log({prizeText});
+
+        //设置中奖文字
+        text.textContent = prizeText;
+
+        function getPrizeText(){
+            //中奖几率
+            const arr = [
+                {
+                    p: 0.1,
+                    text: "一等奖"
+                },
+                {
+                    p: 0.3,
+                    text: "二等奖"
+                },
+                {
+                    p: 0.5,
+                    text: "三等奖"
+                }
+            ]
+            //获取中奖文本
+            const random = Math.random();
+            const temp = arr.find(item=>random < item.p);
+            return temp ? temp?.text : '谢谢惠顾';
+        }
+
+    </script>
+</body>
+</html>

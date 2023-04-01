@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.menu{
+    height: 100px;
+    border-bottom: 3px solid grey;
+    display: flex;
+    padding: 20px;
+    flex-shrink: 0;
+}
+.menu .btn{
+    width: 60px;
+    height: 100%;
+    margin-right: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all .3s;
+    flex-shrink: 0;
+}
+.menu .btn[type="brush"]{
+    background-image: url(./images/画笔.png);
+}
+.menu .btn[type="rect"]{
+    background-image: url(./images/矩形.png);
+}
+.menu .btn[type="circle"]{
+    background-image: url(./images/圆形.png);
+}
+.menu .btn[type="lineWidth"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu .btn[type="lineWidth"][value="thin"]::after{
+    content:"";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+}
+.menu .btn[type="lineWidth"][value="normal"]::after{
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+}
+.menu .btn[type="lineWidth"][value="bold"]::after{
+    content:"";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: black;
+}
+.menu .btn[type="color"]{
+    position: relative;
+    background-size: auto 50%;
+    background-position: top center;
+}
+.menu .btn[type="color"]{
+    background-image: url(./images/颜色.png);
+}
+.menu .btn[type="color"] input{
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    border: none;
+    outline: none;
+    padding: 3px;
+}
+.menu .btn:nth-child(8){
+    background-image: url(./images/保存.png);
+}
+.menu .btn.active{
+    border: 1px solid skyblue;
+    box-shadow: 0 0 5px 5px skyblue;
+}
+.canvas{
+    flex: 1;
+    overflow: hidden;
+}
