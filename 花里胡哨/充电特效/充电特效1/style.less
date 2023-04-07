@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// 电池大小
+@battery-height: 320px;
+@battery-width: 200px;
+// 电池帽大小
+@battery-mao-height: 20px;
+@battery-mao-width: 50px;
+// 电池的圆角
+@battery-radius: 15px;
+// 电池冒的圆角
+@battery-mao-radius: 5px;
+
+// 最终电池的背景色
+@background: #2196f3;
+
+// 电池充电时间
+@battery-charge-time: 5s;
+// 电池帽充电时间
+@battery-mao-charge-time: 0.5s;
+
+body{
+    background: #000;
+    height: 100vh;
+    .battery {
+        width: @battery-width;
+        height: @battery-height;
+        border-radius: @battery-radius;
+        // margin塌陷会导致子元素的margin体现到父元素上,所以不能用下面这种方式来制造电池距离上方的距离
+        // margin: 150px auto;
+        margin: 0 auto;
+        top: 150px;
+        background: #fff;
+        position: relative;
+        .mao {
+            width: @battery-mao-width;
+            height: @battery-mao-height;
+            background: #fff;
+            border-radius: @battery-mao-radius @battery-mao-radius 0 0;
+            position: absolute;
+            top: -@battery-mao-height;
+            left: calc(50% - @battery-mao-width / 2);
+            &::after {
+                content: "";
+                background: @background;
+                position: absolute;
+                left: 0;
+                right: 0;
+                //电池帽没有初始电量,所以top是100%
+                top: 100%;
+                bottom: 0;
+                border-radius: 0px;
+                //电池帽的动画
+                animation: charging-battery-mao @battery-mao-charge-time linear @battery-charge-time;
+                animation-fill-mode: forwards;
+                will-change: top, border-radius, filter;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            //电池有充点前的初始电量,所以top是95%
+            top: 95%;
+            bottom: 0;
+            border-radius: 0 0 @battery-radius @battery-radius;
+            //电池动画
+            animation: charging-battery @battery-charge-time linear;
+            animation-fill-mode: forwards;
+            will-change: top, border-radius, filter;
+            //旋转色相制造充点前的初始颜色
+            background: @background;
+            filter: hue-rotate(90deg);
+        }
+    }
+};
+@keyframes charging-battery {
+    //95%的时候,遮挡部分的圆角开始变化
+    //0-95%,颜色过渡
+    95% {
+        top: 5%;
+        filter: hue-rotate(0deg);
+        border-radius: 0 0 @battery-radius @battery-radius;
+    }
+    100% {
+        top: 0;
+        filter: hue-rotate(0deg);
+        border-radius: @battery-radius;
+    }
+}
+@keyframes charging-battery-mao {
+    //95%的时候,遮挡部分的圆角开始变化
+    //电池帽没有颜色变化
+    95% {
+        top: 5%;
+        border-radius: 0px;
+    }
+    100% {
+        top: 0;
+        border-radius: @battery-mao-radius @battery-mao-radius 0px 0px;
+    }
+}
