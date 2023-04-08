@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// 电池大小
+@battery-height: 320px;
+@battery-width: 200px;
+// 电池的圆角
+@battery-radius: 15px;
+
+// 最终电池的背景色
+@background: #2196f3;
+
+// 电池充电时间
+@battery-charge-time: 20s;
+
+// 波浪的大小
+@wave-size: 400px;
+
+// 波浪圆角的大小
+@wave-border-radius-big: 40%;
+@wave-border-radius-middle: 35%;
+@wave-border-radius-small: 30%;
+
+// 波浪朝左偏移的量,让波浪处于电池的中间位置
+@wave-left: calc((@battery-width - @wave-size)/2);
+
+// 两个覆盖层旋转时错开的角度
+@staggered-angle: 45deg;
+
+//两个覆盖层都是透明的白色
+@cover-background:rgba(255, 255, 255, 0.8);
+
+body {
+    background: #000;
+    height: 100vh;
+    .battery {
+        width: @battery-width;
+        height: @battery-height;
+        border-radius: @battery-radius;
+        // margin塌陷会导致子元素的margin体现到父元素上,所以不能用下面这种方式来制造电池距离上方的距离
+        // margin: 150px auto;
+        margin: 0 auto;
+        top: 150px;
+        background: @background;
+        position: relative;
+    }
+    .cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        // 覆盖层隐藏掉电池之外的部分
+        overflow: hidden;
+        z-index: 1;
+        border-radius: @battery-radius;
+        &::before {
+            content: "";
+            width: @wave-size;
+            height: @wave-size;
+            position: absolute;
+            left: @wave-left;
+            animation: coverBeforeRotate @battery-charge-time linear infinite;
+            animation-fill-mode: forwards;
+            border-radius: @wave-border-radius-middle @wave-border-radius-small;
+            background: @cover-background;
+        }
+        &::after {
+            content: "";
+            width: @wave-size;
+            height: @wave-size;
+            position: absolute;
+            left: @wave-left;
+            animation: coverAfterRotate @battery-charge-time linear infinite;
+            animation-fill-mode: forwards;
+            border-radius: @wave-border-radius-middle @wave-border-radius-big;
+            background: @cover-background;
+        }
+    }
+}
+//动画的两个效果
+//1.绕伪元素的中心旋转,两个波浪的旋转要错开一个角度
+//2.伪元素向上移动:从电池底边开始移动到电池上面
+@keyframes coverBeforeRotate {
+    0% {
+        transform: rotate(0deg);
+        bottom: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        bottom: 100%;
+    }
+}
+@keyframes coverAfterRotate {
+    0% {
+        transform: rotate(@staggered-angle);
+        bottom: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        bottom: 100%;
+    }
+}
