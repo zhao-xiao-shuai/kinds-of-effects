@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$expression: "😊", "😂", "🤣", "👍", "✌", "🤞", "🙌", "🤷", "🤷", "🤦", "😘",
+    "👌", "🤦", "🎶", "😢", "💖", "😜", "🥚", "🍳", "🥨", "🥯", "🥪", "🥙", "🥗",
+    "🥐", "🥚", "🥓", "🍕", "🍔", "🍿", "🧂", "🧈", "🫓", "🌯", "🌮";
+
+// 点赞图标大小
+$icon-size: 50px;
+
+// 点赞图标向上移动的距离
+$moveup-distance: 300px;
+
+body {
+    background-color: #000;
+}
+.container {
+    list-style: none;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $icon-size;
+    height: $icon-size;
+}
+@for $i from 1 to 51 {
+    li:nth-child(#{$i}) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $icon-size;
+        height: $icon-size;
+        animation: moveup
+            #{random *
+            2.5 +
+            1.5}s
+            linear
+            #{-
+            random() *
+            4}s
+            infinite;
+        &::before {
+            position: absolute;
+            font-size: 50px;
+            content: nth($expression, random(length($expression)));
+        }
+    }
+}
+
+@keyframes moveup {
+    100% {
+        transform: translate(0, -$moveup-distance);
+    }
+}

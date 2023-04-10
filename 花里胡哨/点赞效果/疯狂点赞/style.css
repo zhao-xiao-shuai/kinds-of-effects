@@ -1,0 +1,725 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+}
+
+.container {
+  list-style: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+
+li:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(1)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥓";
+}
+
+li:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(2)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🎶";
+}
+
+li:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(3)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👌";
+}
+
+li:nth-child(4) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(4)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🌯";
+}
+
+li:nth-child(5) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(5)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤦";
+}
+
+li:nth-child(6) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(6)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤦";
+}
+
+li:nth-child(7) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(7)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😊";
+}
+
+li:nth-child(8) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(8)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😘";
+}
+
+li:nth-child(9) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(9)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👍";
+}
+
+li:nth-child(10) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(10)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🍔";
+}
+
+li:nth-child(11) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(11)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥗";
+}
+
+li:nth-child(12) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(12)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥚";
+}
+
+li:nth-child(13) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(13)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥚";
+}
+
+li:nth-child(14) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(14)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥓";
+}
+
+li:nth-child(15) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(15)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥓";
+}
+
+li:nth-child(16) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(16)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😢";
+}
+
+li:nth-child(17) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(17)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤣";
+}
+
+li:nth-child(18) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(18)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🧈";
+}
+
+li:nth-child(19) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(19)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🍳";
+}
+
+li:nth-child(20) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(20)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😘";
+}
+
+li:nth-child(21) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(21)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🌮";
+}
+
+li:nth-child(22) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(22)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥨";
+}
+
+li:nth-child(23) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(23)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "💖";
+}
+
+li:nth-child(24) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(24)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥐";
+}
+
+li:nth-child(25) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(25)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥐";
+}
+
+li:nth-child(26) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(26)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤷";
+}
+
+li:nth-child(27) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(27)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😢";
+}
+
+li:nth-child(28) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(28)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥯";
+}
+
+li:nth-child(29) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(29)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🍿";
+}
+
+li:nth-child(30) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(30)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤷";
+}
+
+li:nth-child(31) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(31)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥨";
+}
+
+li:nth-child(32) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(32)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤦";
+}
+
+li:nth-child(33) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(33)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🎶";
+}
+
+li:nth-child(34) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(34)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤷";
+}
+
+li:nth-child(35) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(35)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😢";
+}
+
+li:nth-child(36) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(36)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "💖";
+}
+
+li:nth-child(37) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(37)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🍕";
+}
+
+li:nth-child(38) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(38)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🧈";
+}
+
+li:nth-child(39) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(39)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🍔";
+}
+
+li:nth-child(40) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(40)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🥨";
+}
+
+li:nth-child(41) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(41)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤞";
+}
+
+li:nth-child(42) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(42)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🍳";
+}
+
+li:nth-child(43) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(43)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🙌";
+}
+
+li:nth-child(44) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(44)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👍";
+}
+
+li:nth-child(45) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(45)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "😂";
+}
+
+li:nth-child(46) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(46)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤦";
+}
+
+li:nth-child(47) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(47)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🍿";
+}
+
+li:nth-child(48) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(48)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👍";
+}
+
+li:nth-child(49) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(49)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "👍";
+}
+
+li:nth-child(50) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  animation: moveup 3s linear infinite;
+}
+li:nth-child(50)::before {
+  position: absolute;
+  font-size: 50px;
+  content: "🤦";
+}
+
+@keyframes moveup {
+  100% {
+    transform: translate(0, -300px);
+  }
+}
