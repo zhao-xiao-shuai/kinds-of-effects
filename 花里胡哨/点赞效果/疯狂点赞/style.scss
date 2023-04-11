@@ -24,33 +24,63 @@ body {
     transform: translate(-50%, -50%);
     width: $icon-size;
     height: $icon-size;
+    &::before {
+        content: "👌";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-size: 30px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        width: $icon-size;
+        height: $icon-size;
+        text-align: center;
+    }
+    &:active::before {
+        transform: scale(1.1);
+    }
 }
-@for $i from 1 to 51 {
+@for $i from 1 to 50 {
     li:nth-child(#{$i}) {
         position: absolute;
         top: 0;
         left: 0;
         width: $icon-size;
         height: $icon-size;
+        // transform: rotate(#{random() * 80 - 40}deg);
+        transform: rotate(45deg);
+        transform-origin: center;
         animation: moveup
-            #{random *
+            #{random() *
             2.5 +
             1.5}s
-            linear
-            #{-
+            cubic-bezier(0.46, 0.53, 0.51, 0.62)
+            #{-1 *
             random() *
             4}s
             infinite;
+        opacity: 0;
+        //active类名消失会延迟0.8s
+        //消失的过程会持续1.5s
+        //从开始消失到完全不见,历时2.3s
+        transition: 1.5s opacity 0.8s;
         &::before {
             position: absolute;
             font-size: 50px;
             content: nth($expression, random(length($expression)));
         }
     }
+    li:active {
+        opacity: 1;
+        //点击之后li上立刻带有类名active
+        //active类名持续0.1s
+        //0.1s之后active类名就会消失
+        transition: 0.1s opacity;
+    }
 }
 
 @keyframes moveup {
     100% {
-        transform: translate(0, -$moveup-distance);
+        transform: rotate(0) translate(0, -$moveup-distance);
     }
 }

@@ -17,6 +17,21 @@ body {
   width: 50px;
   height: 50px;
 }
+.container::before {
+  content: "👌";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.container:active::before {
+  transform: scale(1.1);
+}
 
 li:nth-child(1) {
   position: absolute;
@@ -24,12 +39,21 @@ li:nth-child(1) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.2741963767s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.7419392953s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(1)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥓";
+  content: "🤷";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(2) {
@@ -38,12 +62,21 @@ li:nth-child(2) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.6415190129s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.0382702593s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(2)::before {
   position: absolute;
   font-size: 50px;
-  content: "🎶";
+  content: "🥐";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(3) {
@@ -52,12 +85,21 @@ li:nth-child(3) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.7673528739s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.3272201511s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(3)::before {
   position: absolute;
   font-size: 50px;
-  content: "👌";
+  content: "🫓";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(4) {
@@ -66,12 +108,21 @@ li:nth-child(4) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.7701108548s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.2543553942s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(4)::before {
   position: absolute;
   font-size: 50px;
-  content: "🌯";
+  content: "🫓";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(5) {
@@ -80,12 +131,21 @@ li:nth-child(5) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.4638119804s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.909077533s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(5)::before {
   position: absolute;
   font-size: 50px;
-  content: "🤦";
+  content: "✌";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(6) {
@@ -94,12 +154,21 @@ li:nth-child(6) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.5027770388s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.1169891202s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(6)::before {
   position: absolute;
   font-size: 50px;
-  content: "🤦";
+  content: "🌯";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(7) {
@@ -108,12 +177,21 @@ li:nth-child(7) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.9368831027s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.7815871486s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(7)::before {
   position: absolute;
   font-size: 50px;
-  content: "😊";
+  content: "✌";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(8) {
@@ -122,12 +200,21 @@ li:nth-child(8) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.1819469276s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.5015526793s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(8)::before {
   position: absolute;
   font-size: 50px;
-  content: "😘";
+  content: "🧈";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(9) {
@@ -136,12 +223,21 @@ li:nth-child(9) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.8456838374s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.0632151674s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(9)::before {
   position: absolute;
   font-size: 50px;
-  content: "👍";
+  content: "🧂";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(10) {
@@ -150,12 +246,21 @@ li:nth-child(10) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.7725968155s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.3100706045s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(10)::before {
   position: absolute;
   font-size: 50px;
-  content: "🍔";
+  content: "✌";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(11) {
@@ -164,12 +269,21 @@ li:nth-child(11) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.6921662924s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.4342013993s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(11)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥗";
+  content: "🥨";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(12) {
@@ -178,12 +292,21 @@ li:nth-child(12) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.8196525707s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.7747307789s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(12)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥚";
+  content: "🫓";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(13) {
@@ -192,12 +315,21 @@ li:nth-child(13) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.2946138435s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.9692588102s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(13)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥚";
+  content: "🥨";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(14) {
@@ -206,12 +338,21 @@ li:nth-child(14) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.5142080405s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.9595248625s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(14)::before {
   position: absolute;
   font-size: 50px;
   content: "🥓";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(15) {
@@ -220,12 +361,21 @@ li:nth-child(15) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.2938969419s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.0645137108s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(15)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥓";
+  content: "🥙";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(16) {
@@ -234,12 +384,21 @@ li:nth-child(16) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.5755384581s cubic-bezier(0.46, 0.53, 0.51, 0.62) -2.6922581459s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(16)::before {
   position: absolute;
   font-size: 50px;
-  content: "😢";
+  content: "🍿";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(17) {
@@ -248,12 +407,21 @@ li:nth-child(17) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.6237809056s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.3981807902s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(17)::before {
   position: absolute;
   font-size: 50px;
-  content: "🤣";
+  content: "🥗";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(18) {
@@ -262,12 +430,21 @@ li:nth-child(18) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.1664005269s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.9769049927s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(18)::before {
   position: absolute;
   font-size: 50px;
-  content: "🧈";
+  content: "😜";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(19) {
@@ -276,12 +453,21 @@ li:nth-child(19) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.7422702402s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.2586757269s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(19)::before {
   position: absolute;
   font-size: 50px;
-  content: "🍳";
+  content: "🥯";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(20) {
@@ -290,12 +476,21 @@ li:nth-child(20) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.8260378679s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.2911034909s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(20)::before {
   position: absolute;
   font-size: 50px;
-  content: "😘";
+  content: "🎶";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(21) {
@@ -304,12 +499,21 @@ li:nth-child(21) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.5822345575s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.7874104187s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(21)::before {
   position: absolute;
   font-size: 50px;
-  content: "🌮";
+  content: "🍕";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(22) {
@@ -318,12 +522,21 @@ li:nth-child(22) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.7354760289s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.7016292835s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(22)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥨";
+  content: "🍳";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(23) {
@@ -332,12 +545,21 @@ li:nth-child(23) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.8609922954s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.1654654392s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(23)::before {
   position: absolute;
   font-size: 50px;
-  content: "💖";
+  content: "👌";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(24) {
@@ -346,12 +568,21 @@ li:nth-child(24) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.5293780708s cubic-bezier(0.46, 0.53, 0.51, 0.62) -2.1782802004s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(24)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥐";
+  content: "😜";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(25) {
@@ -360,12 +591,21 @@ li:nth-child(25) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.2389117737s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.1968538638s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(25)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥐";
+  content: "🌮";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(26) {
@@ -374,12 +614,21 @@ li:nth-child(26) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.6782072696s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.9822773027s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(26)::before {
   position: absolute;
   font-size: 50px;
-  content: "🤷";
+  content: "🎶";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(27) {
@@ -388,12 +637,21 @@ li:nth-child(27) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.7737695956s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.6901762863s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(27)::before {
   position: absolute;
   font-size: 50px;
-  content: "😢";
+  content: "🍕";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(28) {
@@ -402,12 +660,21 @@ li:nth-child(28) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.9975698151s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.7106114999s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(28)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥯";
+  content: "😢";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(29) {
@@ -416,12 +683,21 @@ li:nth-child(29) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.0862268691s cubic-bezier(0.46, 0.53, 0.51, 0.62) -2.5720523215s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(29)::before {
   position: absolute;
   font-size: 50px;
-  content: "🍿";
+  content: "💖";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(30) {
@@ -430,12 +706,21 @@ li:nth-child(30) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.4462109266s cubic-bezier(0.46, 0.53, 0.51, 0.62) -2.924655804s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(30)::before {
   position: absolute;
   font-size: 50px;
-  content: "🤷";
+  content: "👍";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(31) {
@@ -444,12 +729,21 @@ li:nth-child(31) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.1161563353s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.5058077046s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(31)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥨";
+  content: "🥙";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(32) {
@@ -458,12 +752,21 @@ li:nth-child(32) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.928659877s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.224189832s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(32)::before {
   position: absolute;
   font-size: 50px;
-  content: "🤦";
+  content: "😢";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(33) {
@@ -472,12 +775,21 @@ li:nth-child(33) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.8577529191s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.6851055942s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(33)::before {
   position: absolute;
   font-size: 50px;
-  content: "🎶";
+  content: "🍔";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(34) {
@@ -486,12 +798,21 @@ li:nth-child(34) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.5467810946s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.5554658543s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(34)::before {
   position: absolute;
   font-size: 50px;
-  content: "🤷";
+  content: "🥪";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(35) {
@@ -500,12 +821,21 @@ li:nth-child(35) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.1923662507s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.8945990547s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(35)::before {
   position: absolute;
   font-size: 50px;
-  content: "😢";
+  content: "🥙";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(36) {
@@ -514,12 +844,21 @@ li:nth-child(36) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.248159348s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.227936621s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(36)::before {
   position: absolute;
   font-size: 50px;
-  content: "💖";
+  content: "🤦";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(37) {
@@ -528,12 +867,21 @@ li:nth-child(37) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.3433929778s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.9849905914s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(37)::before {
   position: absolute;
   font-size: 50px;
-  content: "🍕";
+  content: "🌮";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(38) {
@@ -542,12 +890,21 @@ li:nth-child(38) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.8785713884s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.7491992469s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(38)::before {
   position: absolute;
   font-size: 50px;
-  content: "🧈";
+  content: "🎶";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(39) {
@@ -556,12 +913,21 @@ li:nth-child(39) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.694290716s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.9421808147s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(39)::before {
   position: absolute;
   font-size: 50px;
-  content: "🍔";
+  content: "🥐";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(40) {
@@ -570,12 +936,21 @@ li:nth-child(40) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.7855401499s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.7003483744s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(40)::before {
   position: absolute;
   font-size: 50px;
-  content: "🥨";
+  content: "🍿";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(41) {
@@ -584,12 +959,21 @@ li:nth-child(41) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.0674037506s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.0440681021s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(41)::before {
   position: absolute;
   font-size: 50px;
-  content: "🤞";
+  content: "😘";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(42) {
@@ -598,12 +982,21 @@ li:nth-child(42) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.9124442122s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.5385282394s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(42)::before {
   position: absolute;
   font-size: 50px;
-  content: "🍳";
+  content: "🍿";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(43) {
@@ -612,12 +1005,21 @@ li:nth-child(43) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.5366747085s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.1725167301s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(43)::before {
   position: absolute;
   font-size: 50px;
-  content: "🙌";
+  content: "🥓";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(44) {
@@ -626,12 +1028,21 @@ li:nth-child(44) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.7022583818s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.7171531369s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(44)::before {
   position: absolute;
   font-size: 50px;
-  content: "👍";
+  content: "🎶";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(45) {
@@ -640,12 +1051,21 @@ li:nth-child(45) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.6652663812s cubic-bezier(0.46, 0.53, 0.51, 0.62) -1.8830541791s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(45)::before {
   position: absolute;
   font-size: 50px;
-  content: "😂";
+  content: "🫓";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(46) {
@@ -654,12 +1074,21 @@ li:nth-child(46) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 2.9878812802s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.23477047s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(46)::before {
   position: absolute;
   font-size: 50px;
-  content: "🤦";
+  content: "🥨";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(47) {
@@ -668,12 +1097,21 @@ li:nth-child(47) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.4146241486s cubic-bezier(0.46, 0.53, 0.51, 0.62) -3.3389359503s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(47)::before {
   position: absolute;
   font-size: 50px;
-  content: "🍿";
+  content: "🤷";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(48) {
@@ -682,12 +1120,21 @@ li:nth-child(48) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 1.9211114118s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.1667465903s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(48)::before {
   position: absolute;
   font-size: 50px;
-  content: "👍";
+  content: "🤦";
+}
+
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 li:nth-child(49) {
@@ -696,30 +1143,25 @@ li:nth-child(49) {
   left: 0;
   width: 50px;
   height: 50px;
-  animation: moveup 3s linear infinite;
+  transform: rotate(45deg);
+  transform-origin: center;
+  animation: moveup 3.0482575733s cubic-bezier(0.46, 0.53, 0.51, 0.62) -0.9776834984s infinite;
+  opacity: 0;
+  transition: 1.5s opacity 0.8s;
 }
 li:nth-child(49)::before {
   position: absolute;
   font-size: 50px;
-  content: "👍";
+  content: "🌮";
 }
 
-li:nth-child(50) {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  animation: moveup 3s linear infinite;
-}
-li:nth-child(50)::before {
-  position: absolute;
-  font-size: 50px;
-  content: "🤦";
+li:active {
+  opacity: 1;
+  transition: 0.1s opacity;
 }
 
 @keyframes moveup {
   100% {
-    transform: translate(0, -300px);
+    transform: rotate(0) translate(0, -300px);
   }
 }
